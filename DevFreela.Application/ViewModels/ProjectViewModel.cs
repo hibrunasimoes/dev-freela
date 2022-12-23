@@ -9,6 +9,13 @@ namespace DevFreela.Application.ViewModels
             CreatedAt = createdAt;
         }
 
+        public ProjectViewModel(int id, string title, DateTime createdAt)
+        {
+            Id = id;
+            Title = title;
+            CreatedAt = createdAt;
+        }
+
         public ProjectViewModel(int id, string title, string description, decimal totalCost, DateTime? startedAt, DateTime? finishedAt)
         {
             Id = id;
