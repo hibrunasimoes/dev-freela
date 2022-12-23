@@ -13,7 +13,7 @@ namespace DevFreela.Domain.Entities
             CreatedAt = DateTime.Now;
             Skills = new List<UserSkill>();
             OwnedProjects = new List<Project>();
-            FreelancerProjects = new List<Project>();
+            FreelanceProjects = new List<Project>();
         }
 
         public string FullName { get; private set; }
@@ -24,7 +24,8 @@ namespace DevFreela.Domain.Entities
 
         public List<UserSkill> Skills { get; private set; }
         public List<Project> OwnedProjects { get; private set; }
-        public List<Project> FreelancerProjects { get; private set; }
+        public List<ProjectComment> Comments { get; private set; }
+        public List<Project> FreelanceProjects { get; private set; }
     }
 
 }
