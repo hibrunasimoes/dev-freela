@@ -1,7 +1,15 @@
 ﻿using DevFreela.API.Models;
+using DevFreela.Application.Commands.CreateComment;
+using DevFreela.Application.Commands.CreateProject;
+using DevFreela.Application.Commands.DeleteProject;
+using DevFreela.Application.Commands.FinishProject;
+using DevFreela.Application.Commands.LoginUser;
+using DevFreela.Application.Commands.StartProject;
+using DevFreela.Application.Commands.UpdateProject;
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interface;
 using DevFreela.Infrastructure.Persistence;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +19,16 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DevFreelaCs");
 builder.Services.AddDbContext<DevFreelaDbContext>(p => p.UseSqlServer(connectionString));
 builder.Services.AddControllers();
+
+
+builder.Services.AddMediatR(typeof(CreateCommentCommand));
+builder.Services.AddMediatR(typeof(CreateProjectCommand));
+builder.Services.AddMediatR(typeof(DeleteProjectCommand));
+builder.Services.AddMediatR(typeof(FinishProjectCommand));
+builder.Services.AddMediatR(typeof(StartProjectCommand));
+builder.Services.AddMediatR(typeof(UpdateProjectCommand));
+builder.Services.AddMediatR(typeof(LoginUserCommand));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

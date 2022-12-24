@@ -13,6 +13,19 @@
     <None Remove="Services\Implementations\" />
     <None Remove="ViewModels\" />
     <None Remove="Dapper" />
+    <None Remove="Commands\" />
+    <None Remove="Queries\" />
+    <None Remove="Commands\CreateProject\" />
+    <None Remove="Queries\GetAllSkills\" />
+    <None Remove="MediatR" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Commands\CreateComment\" />
+    <None Remove="Commands\CreateUser\" />
+    <None Remove="Commands\DeleteProject\" />
+    <None Remove="Commands\FinishProject\" />
+    <None Remove="Commands\LoginUser\" />
+    <None Remove="Commands\StartProject\" />
+    <None Remove="Commands\UpdateProject\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InputModels\" />
@@ -20,6 +33,17 @@
     <Folder Include="Services\Interface\" />
     <Folder Include="Services\Implementations\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Queries\" />
+    <Folder Include="Commands\CreateProject\" />
+    <Folder Include="Queries\GetAllSkills\" />
+    <Folder Include="Commands\CreateComment\" />
+    <Folder Include="Commands\CreateUser\" />
+    <Folder Include="Commands\DeleteProject\" />
+    <Folder Include="Commands\FinishProject\" />
+    <Folder Include="Commands\LoginUser\" />
+    <Folder Include="Commands\StartProject\" />
+    <Folder Include="Commands\UpdateProject\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />
@@ -27,5 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
   </ItemGroup>
 </Project>

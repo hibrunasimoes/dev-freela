@@ -1,8 +1,10 @@
 ﻿using System;
-namespace DevFreela.Application.InputModels
+using MediatR;
+
+namespace DevFreela.Application.Commands.CreateProject
 {
-    public class NewProjectInputModel
-    {
+	public class CreateProjectCommand : IRequest<int>
+	{
         public string Title { get; set; }
         public string Description { get; set; }
         public int ClientId { get; set; }
@@ -10,3 +12,4 @@ namespace DevFreela.Application.InputModels
         public decimal TotalCost { get; set; }
     }
 }
+
