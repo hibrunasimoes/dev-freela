@@ -12,6 +12,7 @@
     <None Remove="Services\Interface\" />
     <None Remove="Services\Implementations\" />
     <None Remove="ViewModels\" />
+    <None Remove="Dapper" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InputModels\" />
@@ -23,5 +24,8 @@
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />
     <ProjectReference Include="..\DevFreela.Infrastructure\DevFreela.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
   </ItemGroup>
 </Project>
