@@ -8,8 +8,6 @@ namespace DevFreela.Application.Services.Interface
 	{
 		List<ProjectViewModel> GetAll(string quwery);
 		ProjectDetailsViewModel GetById(int id);
-		void Start(int id);
-		void Finish(int id);
 	}
 }
 
