@@ -11,11 +11,13 @@
     <None Remove="Enums\" />
     <None Remove="Exceptions\" />
     <None Remove="Repositories\" />
+    <None Remove="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Enums\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Repositories\" />
+    <Folder Include="DTOs\" />
   </ItemGroup>
 </Project>

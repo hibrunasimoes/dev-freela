@@ -14,12 +14,15 @@
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Persistence\Mappings\" />
+    <None Remove="Persistence\Repositories\" />
+    <None Remove="Dapper" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistence\" />
     <Folder Include="CloudService\" />
     <Folder Include="CloudService\Interfaces\" />
     <Folder Include="Persistence\Mappings\" />
+    <Folder Include="Persistence\Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />
@@ -31,5 +34,6 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
   </ItemGroup>
 </Project>

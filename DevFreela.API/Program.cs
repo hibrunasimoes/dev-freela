@@ -8,7 +8,9 @@ using DevFreela.Application.Commands.StartProject;
 using DevFreela.Application.Commands.UpdateProject;
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interface;
+using DevFreela.Domain.Repositories;
 using DevFreela.Infrastructure.Persistence;
+using DevFreela.Infrastructure.Persistence.Repositories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,6 +30,10 @@ builder.Services.AddMediatR(typeof(FinishProjectCommand));
 builder.Services.AddMediatR(typeof(StartProjectCommand));
 builder.Services.AddMediatR(typeof(UpdateProjectCommand));
 builder.Services.AddMediatR(typeof(LoginUserCommand));
+
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<ISkillRepository, SkillRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -3,8 +3,9 @@ using DevFreela.Domain.Entities;
 
 namespace DevFreela.Domain.Repositories
 {
-    public interface IProjectRepository
-    {
-        Task<List<Project>> GetAllAsync(); 
+	public interface IUserRepository
+	{
+        Task<User> GetByIdAsync(int id);
     }
 }
+
