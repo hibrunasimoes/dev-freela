@@ -26,6 +26,9 @@
     <None Remove="Commands\LoginUser\" />
     <None Remove="Commands\StartProject\" />
     <None Remove="Commands\UpdateProject\" />
+    <None Remove="Queries\GetAllProjects\" />
+    <None Remove="Queries\GetProjectById\" />
+    <None Remove="Queries\GetUser\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InputModels\" />
@@ -44,6 +47,9 @@
     <Folder Include="Commands\LoginUser\" />
     <Folder Include="Commands\StartProject\" />
     <Folder Include="Commands\UpdateProject\" />
+    <Folder Include="Queries\GetAllProjects\" />
+    <Folder Include="Queries\GetProjectById\" />
+    <Folder Include="Queries\GetUser\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />

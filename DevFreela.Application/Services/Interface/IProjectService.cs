@@ -6,8 +6,6 @@ namespace DevFreela.Application.Services.Interface
 {
 	public interface IProjectService
 	{
-		List<ProjectViewModel> GetAll(string quwery);
-		ProjectDetailsViewModel GetById(int id);
 	}
 }
 

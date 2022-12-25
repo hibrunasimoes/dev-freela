@@ -1,34 +1,25 @@
 ﻿using System;
-using System.Linq;
-using Dapper;
-using DevFreela.Application.InputModels;
-using DevFreela.Application.Services.Interface;
 using DevFreela.Application.ViewModels;
-using DevFreela.Domain.Entities;
 using DevFreela.Infrastructure.Persistence;
-using Microsoft.Data.SqlClient;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
-namespace DevFreela.Application.Services.Implementations
+namespace DevFreela.Application.Queries.GetProjectById
 {
-    public class ProjectService : IProjectService
+    public class GetProjectByIdQueryHandler : IRequestHandler<GetProjectByIdQuery, ProjectDetailsViewModel>
     {
         private readonly DevFreelaDbContext _dbContext;
-        private readonly string _connectionString; 
-
-        public ProjectService (DevFreelaDbContext dbContext, IConfiguration configuration )
+        public GetProjectByIdQueryHandler(DevFreelaDbContext dbContext)
         {
             _dbContext = dbContext;
-            _connectionString = configuration.GetConnectionString("DevFreelaCs");
         }
 
-        public ProjectDetailsViewModel GetById(int id)
+        public async Task<ProjectDetailsViewModel> Handle(GetProjectByIdQuery request, CancellationToken cancellationToken)
         {
-            var project = _dbContext.Projects
+            var project = await _dbContext.Projects
                 .Include(p => p.Client)
                 .Include(p => p.Freelancer)
-                .SingleOrDefault(p => p.Id == id);
+                .SingleOrDefaultAsync(p => p.Id == request.Id);
 
             if (project == null) return null;
 
@@ -40,10 +31,10 @@ namespace DevFreela.Application.Services.Implementations
                 project.StartedAt,
                 project.FinishedAt,
                 project.Client.FullName,
-                project.Freelancer.FullName);
+                project.Freelancer.FullName
+                );
 
             return projectDetailsViewModel;
         }
     }
 }
-

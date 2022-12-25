@@ -6,7 +6,6 @@ namespace DevFreela.Application.Services.Interface
 {
 	public interface ISkillService
 	{
-		List<SkillViewModel> GetAll();
 	}
 }
 
