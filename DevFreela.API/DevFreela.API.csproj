@@ -30,10 +30,12 @@
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="MediatR" />
     <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Filters\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj">

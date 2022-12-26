@@ -29,6 +29,8 @@
     <None Remove="Queries\GetAllProjects\" />
     <None Remove="Queries\GetProjectById\" />
     <None Remove="Queries\GetUser\" />
+    <None Remove="FluentValidation.AspNetCore" />
+    <None Remove="Validators\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InputModels\" />
@@ -50,6 +52,7 @@
     <Folder Include="Queries\GetAllProjects\" />
     <Folder Include="Queries\GetProjectById\" />
     <Folder Include="Queries\GetUser\" />
+    <Folder Include="Validators\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />
@@ -59,5 +62,6 @@
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
   </ItemGroup>
 </Project>
