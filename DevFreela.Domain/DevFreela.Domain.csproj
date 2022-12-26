@@ -12,6 +12,7 @@
     <None Remove="Exceptions\" />
     <None Remove="Repositories\" />
     <None Remove="DTOs\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -19,5 +20,6 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Repositories\" />
     <Folder Include="DTOs\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

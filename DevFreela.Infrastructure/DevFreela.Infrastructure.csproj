@@ -16,6 +16,7 @@
     <None Remove="Persistence\Mappings\" />
     <None Remove="Persistence\Repositories\" />
     <None Remove="Dapper" />
+    <None Remove="AuthService\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistence\" />
@@ -23,6 +24,7 @@
     <Folder Include="CloudService\Interfaces\" />
     <Folder Include="Persistence\Mappings\" />
     <Folder Include="Persistence\Repositories\" />
+    <Folder Include="AuthService\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />
