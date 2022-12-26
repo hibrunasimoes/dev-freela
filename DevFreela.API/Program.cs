@@ -11,6 +11,8 @@ using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interface;
 using DevFreela.Application.Validators;
 using DevFreela.Domain.Repositories;
+using DevFreela.Domain.Services;
+using DevFreela.Infrastructure.AuthService;
 using DevFreela.Infrastructure.Persistence;
 using DevFreela.Infrastructure.Persistence.Repositories;
 using FluentValidation.AspNetCore;
@@ -52,6 +54,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DevFreelaDbContext>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+
 builder.Services.Configure<OpeningTimeOption>(builder.Configuration.GetSection("OpeningTime"));
 builder.Services.AddScoped(e => new ExampleClass { Name = "Initial Stage" });
 
