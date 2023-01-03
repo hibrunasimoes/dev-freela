@@ -19,15 +19,23 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Moq" Version="4.18.4" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Domain\" />
     <None Remove="Domain\Entities\" />
+    <None Remove="Application\" />
+    <None Remove="Application\Commands\" />
+    <None Remove="Application\Queries\" />
+    <None Remove="Moq" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain\" />
     <Folder Include="Domain\Entities\" />
+    <Folder Include="Application\" />
+    <Folder Include="Application\Commands\" />
+    <Folder Include="Application\Queries\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />
