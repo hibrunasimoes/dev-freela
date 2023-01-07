@@ -17,6 +17,7 @@
     <None Remove="Persistence\Repositories\" />
     <None Remove="Dapper" />
     <None Remove="AuthService\" />
+    <None Remove="PaymentsService\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistence\" />
@@ -25,6 +26,7 @@
     <Folder Include="Persistence\Mappings\" />
     <Folder Include="Persistence\Repositories\" />
     <Folder Include="AuthService\" />
+    <Folder Include="PaymentsService\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />
