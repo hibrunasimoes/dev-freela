@@ -14,6 +14,7 @@ using DevFreela.Application.Validators;
 using DevFreela.Domain.Repositories;
 using DevFreela.Domain.Services;
 using DevFreela.Infrastructure.AuthService;
+using DevFreela.Infrastructure.PaymentsService;
 using DevFreela.Infrastructure.Persistence;
 using DevFreela.Infrastructure.Persistence.Repositories;
 using FluentValidation.AspNetCore;
@@ -30,6 +31,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DevFreelaCs");
 builder.Services.AddDbContext<DevFreelaDbContext>(p => p.UseSqlServer(connectionString));
 builder.Services.AddControllers();
+builder.Services.AddHttpClient();
 
 
 builder.Services.AddMediatR(typeof(CreateCommentCommand));
@@ -43,6 +45,7 @@ builder.Services.AddMediatR(typeof(LoginUserCommand));
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<ISkillRepository, SkillRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 
 builder.Services
     .AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
@@ -58,6 +61,7 @@ builder.Services.AddDbContext<DevFreelaDbContext>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 
 builder.Services.Configure<OpeningTimeOption>(builder.Configuration.GetSection("OpeningTime"));
 builder.Services.AddScoped(e => new ExampleClass { Name = "Initial Stage" });
