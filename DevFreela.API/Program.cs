@@ -14,6 +14,7 @@ using DevFreela.Application.Validators;
 using DevFreela.Domain.Repositories;
 using DevFreela.Domain.Services;
 using DevFreela.Infrastructure.AuthService;
+using DevFreela.Infrastructure.MessageBus;
 using DevFreela.Infrastructure.PaymentsService;
 using DevFreela.Infrastructure.Persistence;
 using DevFreela.Infrastructure.Persistence.Repositories;
@@ -62,6 +63,7 @@ builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IMessageBusService, MessageBusService>();
 
 builder.Services.Configure<OpeningTimeOption>(builder.Configuration.GetSection("OpeningTime"));
 builder.Services.AddScoped(e => new ExampleClass { Name = "Initial Stage" });

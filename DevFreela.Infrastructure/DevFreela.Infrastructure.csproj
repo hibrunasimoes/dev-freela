@@ -19,6 +19,8 @@
     <None Remove="AuthService\" />
     <None Remove="PaymentsService\" />
     <None Remove="Microsoft.Extensions.Http" />
+    <None Remove="RabbitMQ.Client" />
+    <None Remove="MessageBus\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistence\" />
@@ -28,6 +30,7 @@
     <Folder Include="Persistence\Repositories\" />
     <Folder Include="AuthService\" />
     <Folder Include="PaymentsService\" />
+    <Folder Include="MessageBus\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />
@@ -41,5 +44,6 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
   </ItemGroup>
 </Project>
