@@ -36,18 +36,13 @@ builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddHostedService<ApprovedPaymentsConsumer>();
 
-builder.Services.AddMediatR(typeof(CreateCommentCommand));
-builder.Services.AddMediatR(typeof(CreateProjectCommand));
-builder.Services.AddMediatR(typeof(DeleteProjectCommand));
-builder.Services.AddMediatR(typeof(FinishProjectCommand));
-builder.Services.AddMediatR(typeof(StartProjectCommand));
-builder.Services.AddMediatR(typeof(UpdateProjectCommand));
-builder.Services.AddMediatR(typeof(LoginUserCommand));
-
-builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
-builder.Services.AddScoped<ISkillRepository, SkillRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-
+//builder.Services.AddMediatR(typeof(CreateCommentCommand));
+//builder.Services.AddMediatR(typeof(CreateProjectCommand));
+//builder.Services.AddMediatR(typeof(DeleteProjectCommand));
+//builder.Services.AddMediatR(typeof(FinishProjectCommand));
+//builder.Services.AddMediatR(typeof(StartProjectCommand));
+//builder.Services.AddMediatR(typeof(UpdateProjectCommand));
+//builder.Services.AddMediatR(typeof(LoginUserCommand));
 
 builder.Services
     .AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
@@ -60,11 +55,7 @@ builder.Services
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<DevFreelaDbContext>();
-builder.Services.AddScoped<IProjectService, ProjectService>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IPaymentService, PaymentService>();
-builder.Services.AddScoped<IMessageBusService, MessageBusService>();
+
 
 builder.Services.Configure<OpeningTimeOption>(builder.Configuration.GetSection("OpeningTime"));
 builder.Services.AddScoped(e => new ExampleClass { Name = "Initial Stage" });
