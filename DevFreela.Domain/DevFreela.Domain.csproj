@@ -13,6 +13,7 @@
     <None Remove="Repositories\" />
     <None Remove="DTOs\" />
     <None Remove="Services\" />
+    <None Remove="IntegrationsEvents\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -21,5 +22,6 @@
     <Folder Include="Repositories\" />
     <Folder Include="DTOs\" />
     <Folder Include="Services\" />
+    <Folder Include="IntegrationsEvents\" />
   </ItemGroup>
 </Project>

@@ -31,6 +31,8 @@
     <None Remove="Queries\GetUser\" />
     <None Remove="FluentValidation.AspNetCore" />
     <None Remove="Validators\" />
+    <None Remove="RabbitMQ.Client" />
+    <None Remove="Consumers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="InputModels\" />
@@ -53,6 +55,7 @@
     <Folder Include="Queries\GetProjectById\" />
     <Folder Include="Queries\GetUser\" />
     <Folder Include="Validators\" />
+    <Folder Include="Consumers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFreela.Domain\DevFreela.Domain.csproj" />
@@ -63,5 +66,6 @@
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
   </ItemGroup>
 </Project>

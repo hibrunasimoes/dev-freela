@@ -8,6 +8,7 @@ using DevFreela.Application.Commands.FinishProject;
 using DevFreela.Application.Commands.LoginUser;
 using DevFreela.Application.Commands.StartProject;
 using DevFreela.Application.Commands.UpdateProject;
+using DevFreela.Application.Consumers;
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interface;
 using DevFreela.Application.Validators;
@@ -33,7 +34,7 @@ var connectionString = builder.Configuration.GetConnectionString("DevFreelaCs");
 builder.Services.AddDbContext<DevFreelaDbContext>(p => p.UseSqlServer(connectionString));
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
-
+builder.Services.AddHostedService<ApprovedPaymentsConsumer>();
 
 builder.Services.AddMediatR(typeof(CreateCommentCommand));
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
